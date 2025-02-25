@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENGUMPULAN TUGAS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section>
+        <div class="row">
+            <div class="left">
+                <h2>APA ITU PPLG?</h2>
+                <p>PPLG (Pengembangan Perangkat Lunak dan Gim) adalah sebuah jurusan atau program keahlian yang fokus pada pengembangan perangkat lunak (software) dan pembuatan game. Jurusan ini biasanya terdapat di Sekolah Menengah Kejuruan (SMK) atau lembaga pendidikan vokasi lainnya. PPLG mempelajari berbagai aspek terkait pemrograman, pengembangan aplikasi, desain game, manajemen basis data, dan teknologi informasi secara umum.</p>
+                
+                <h2>Materi yang Dipelajari di Jurusan PPLG</h2>
+                <ol>
+                    <li>Pemrograman Dasar: Belajar bahasa pemrograman seperti Python, Java, C++, atau JavaScript.</li>
+                    <li>Pengembangan Web: Membuat website menggunakan HTML, CSS, JavaScript, dan framework seperti Bootstrap atau React.</li>
+                    <li>Pengembangan Aplikasi: Membuat aplikasi desktop atau mobile menggunakan tools seperti Android Studio, Flutter, atau Xcode.</li>
+                </ol>
+                
+                <h2>Peluang Kerja Jurusan PPLG</h2>
+                <ol>
+                    <li>Software Developer: Mengembangkan aplikasi atau software untuk berbagai platform.</li>
+                    <li>Pengembangan Web: Membuat website menggunakan HTML, CSS, JavaScript, dan framework seperti Bootstrap atau React.</li>
+                    <li>Pengembangan Aplikasi: Membuat aplikasi desktop atau mobile menggunakan tools seperti Android Studio, Flutter, atau Xcode.</li>
+                </ol>
+                
+                <h2>Penghasilan untuk Pemula di Bidang PPLG</h2>
+                <ol>
+                    <li>Software Developer: Rp 4 - 7 juta per bulan.</li>
+                    <li>Web Developer: Rp 3,5 - 6 juta per bulan.</li>
+                    <li>Game Developer: Rp 4 - 8 juta per bulan</li>
+                </ol>
+
+                <div class="profile">
+                    <h1>ABOUT ME</h1>
+                    <p>SAYA FRAZA S.A</p>
+                    <p>Kelas X PPLG 2</p>
+                </div>
+            </div>
+
+            <div class="right">
+                <h2>PENGUMPULAN TUGAS</h2>
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+                <ul id="myMenu">
+                    <li><a href="./latihan/js.html"> belajar java script 1</a></li>
+                    <li><a href="./latihan/jut.js">belajar java script 2</a></li>
+                    <li><a href="./latihan/latluaspersegi.html">Luas persegi</a></li>
+                    <li><a href="./latihan/tugasluassegitiga.html">Luas segitiga</a></li>
+                    <li><a href="./latihan/cekprestasi.html"> cek prestasi </a></li>
+                    <li><a href="./latihan/nilai.html">nilai</a></li>
+                    <li><a href="./latihan/programmencarip&q.html">Mencari p dan q</a></li>
+                    <li><a href="./latihan/PRJLF.html">menghitung harga foto copy</a></li>
+                    <li><a href="./latihan/seblak.html">seblak viral</a></li>
+                    <li><a href="./latihan/ifmenonton.html">Latihan percabangan</a></li>
+                    <li><a href="./latihan/latpengulangan.html">latihan pengulangan 1</a></li>
+                    <li><a href="./latihan/pengulangan2.html">latihan pengulangan 2</a></li>
+                    <li><a href="./latihan/pengulangan3.html">latihan pengulangan 3</a></li>
+                    <li><a href="./latihan/pengulangan4.html">latihan pengulangan 4</a></li>
+                    <li><a href="./latihan/pengulangan5.html">latihan pengulangan 5</a></li>
+                    <li><a href="./latihan/pengulangan6.html">latihan pengulangan 6</a></li>
+                    <li><a href="./latihan/pengulangan7.html">latihan pengulangan 7</a></li>
+                    <li><a href="./latihan/tugasflowchart.html">latihan flowchart</a></li>
+                    <li><a href="./latihan/flowchart2.html">latihan flowchart 2</a></li>
+                    <li><a href="./latihan/latflowchart.html">menghitung belanjaan buah</a></li>
+                    <li><a href="./latihan/parameter.html">PARAMETER</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function myFunction() {
+            const input = document.getElementById("mySearch");
+            const filter = input.value.toUpperCase();
+            const ul = document.getElementById("myMenu");
+            const li = ul.getElementsByTagName("li");
+            
+            for (let i = 0; i < li.length; i++) {
+                const a = li[i].getElementsByTagName("a")[0];
+                li[i].style.display = a.innerHTML.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+            }
+        }
+    </script>
+</body>
+</html>
