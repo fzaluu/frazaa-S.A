@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Belanja Buah</title>
+</head>
+<body>
+    <h1>Menghitung Pembayaran Buah</h1>
+    <form onsubmit="return false">
+        <label for="nb">Nama Buah:</label>
+        <input type="text" id="nb"><br>
+
+        <label for="jk">Jumlah Kg:</label>
+        <input type="number" id="jk"><br>
+
+        <label for="hpk">Harga Per Kilo (Rp):</label>
+        <input type="number" id="hpk"><br>
+
+        <button onclick="hitung()">Hitung</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        function hitung() {
+            let nb = document.getElementById('nb').value;
+            let jk = parseFloat(document.getElementById('jk').value);
+            let hpk = parseFloat(document.getElementById('hpk').value);
+
+            let hfk = hpk * jk;
+            let tb = hfk;
+
+            let diskon = 0;
+
+            if (tb > 100000) {
+                diskon = 0.10;
+            } else if (tb > 50000 && tb <= 100000) {
+                diskon = 0.05;
+            }
+
+            let jumlahDiskon = tb * diskon;
+            let hsd = tb - jumlahDiskon;
+
+            document.getElementById('output').innerHTML = `
+                <p>Nama Buah: ${nb}</p>
+                <p>Jumlah: ${jk} Kg</p>
+                <p>Harga Per Kilo: Rp${hpk.toLocaleString('id-ID')}</p>
+                <p>Total Belanja: Rp${tb.toLocaleString('id-ID')}</p>
+                <p>Diskon: ${diskon * 100}% (Rp${jumlahDiskon.toLocaleString('id-ID')})</p>
+                <p>Harga Setelah Diskon: Rp${hsd.toLocaleString('id-ID')}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

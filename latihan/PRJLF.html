@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menghitung HPP</title>
+</head>
+<body>
+    <div>
+        <h1>Aplikasi pembayaran foto copy</h1>
+        <form method="post" onsubmit="return false">
+          <label> pilih anggota</label><br>
+            <input type="radio" id="pelanggan" name="status" value="pelanggan" checked>
+          <label for="pelanggan">pelanggan</label>
+            <input type="radio" id="bukan-pelanggan" name="status" value="bukan-pelanggan" >
+          <label for="bukan-pelanggan">bukan pelanggan</label><br><br>
+          <label for="jumlah">jumlah foto copy </label>
+            <input type="number" id="jumlah"> <br><br>
+           <button onclick="hitungbayar()">hitung total bayar</button>
+        </form>
+         <p id="hasil"></p>
+    </div> 
+    <script>
+        function hitungbayar() {
+            let jumlah = parseInt(document.getElementById('jumlah').value);
+            let hpp = 0;
+            let hasil = 0;
+            if (document.getElementById('pelanggan').checked){
+                status = "pelanggan"
+            }
+            if (document.getElementById('bukan-pelanggan').checked){
+                 status = "bukan-pelanggan"
+            }
+               document.getElementById('hasil').innerHTML = status
+    
+            if (status == "pelanggan") {
+                hpp = 75;
+            } else {
+                if (jumlah <= 100) {
+                    hpp = 100;
+                } else {
+                    hpp = 85;
+                }
+            }
+    
+            let hp = jumlah * hpp;
+
+            document.getElementById('hasil').innerHTML = `
+                status: ${status} <br>
+                jumlah fotocopy: ${jumlah} <br>
+                total pembayaran : ${hp}
+
+            `;
+        }
+    </script>
+</body>
+</html>

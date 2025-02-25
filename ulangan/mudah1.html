@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soal mudah</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return false">
+        masukan panjang persegi <input type="number" name="" id="panjang">
+        <br>
+        masukan lebar persegi <input type="number" name="" id="lebar">
+        <br>
+        <button onclick="hitung()">hitung luas </button>
+        <p id="hasil"></p>
+     </form>     
+    <script>
+        function hitung() {
+            let panjang = document.getElementById('panjang').value
+            let lebar = document.getElementById('lebar').value
+            let luas = panjang * lebar
+            document.getElementById('hasil').innerHTML = luas
+        }
+    </script>
+</body>
+</html>

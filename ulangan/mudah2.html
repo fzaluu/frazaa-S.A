@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATIHAN PERCABANGAN</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return false">
+        masukan Nama <input type="text" id="nama"><br>
+        masukan nilai <input type="number" id="nilai"><br>
+        <button onclick="cek()">cek status</button>
+    </form>
+    <p id="hasil"></p>
+
+    <script>
+        function cek() {
+            let nama = document.getElementById('nama').value
+            let nilai = document.getElementById('nilai').value
+            if (nilai >= 17) {
+               document.getElementById('hasil').innerHTML = `maka:
+               selamat kamu lulus`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log("semangatt sayangg ku gantengg kuu,MUAHH!!")
